@@ -35,3 +35,6 @@ The in-memory incident latch holds learning for 30 healthy cycles after evidence
 
 ## V1.0.0 (successor to V9.0)
 IncidentStore persists the remaining healthy-cycle hold in data/incident.dat. Missing or malformed state starts with a 30-cycle hold; write failures freeze learning. This is not authenticated storage and cannot resist an administrator or a malicious user with write access. Atomic rename is not a guarantee of power-loss durability. security-events.cmd provides a manual read-only audit of recent failed logons, account/group changes, cleared logs and Defender events; it is not a live sensor. Event text may contain private account information. Existing active scan and confirmed containment policies are unchanged. No Windows integration or resource benchmark was performed here.
+
+## V1.1.0
+Continuous future-event subscriptions to Security and Defender logs (32 events/channel/cycle); any selected event is a review signal, not proof of intrusion. Missing subscriptions or backlog freeze learning. Learning is deferred until after fusion and incident policy. Windows integration not compiled or tested here. No authenticated profiles, per-process network byte accounting, automatic firewall containment or credential protection added. Portable tests: see TESTS.txt. Start in observation mode and verify event access before enabling active mode.

@@ -14,7 +14,7 @@ if(WIN32)
  add_executable(LocalGuard main.cpp Response.cpp Monitor.cpp Detector.cpp Events.cpp
  Health.cpp Agents.cpp Exchange.cpp Integrity.cpp Budget.cpp Coordinator.cpp Runtime.cpp Behavior.cpp Fusion.cpp Decision.cpp Adaptive.cpp DataDefense.cpp)
  target_compile_definitions(LocalGuard PRIVATE _WIN32_WINNT=0x0A00 WIN32_LEAN_AND_MEAN NOMINMAX)
- target_link_libraries(LocalGuard PRIVATE iphlpapi ws2_32 advapi32 bcrypt psapi)
+ target_link_libraries(LocalGuard PRIVATE iphlpapi ws2_32 advapi32 bcrypt psapi wevtapi)
 endif()
 
 add_executable(BehaviorTest BehaviorTest.cpp Behavior.cpp)
@@ -50,3 +50,6 @@ add_executable(IncidentTest IncidentTest.cpp)
 add_test(NAME IncidentTest COMMAND IncidentTest)
 add_executable(IncidentStoreTest IncidentStoreTest.cpp)
 add_test(NAME IncidentStoreTest COMMAND IncidentStoreTest)
+
+add_executable(LearningGateTest LearningGateTest.cpp)
+add_test(NAME LearningGateTest COMMAND LearningGateTest)
