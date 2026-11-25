@@ -29,3 +29,6 @@ Create build/data/watch.txt before starting the monitor (a harmless text file). 
 - Correction : une énumération de processus interrompue est signalée comme télémétrie incomplète.
 - Créer le témoin uniquement s'il est absent : `if not exist build\data mkdir build\data` puis `if not exist build\data\watch.txt echo LocalGuard baseline>build\data\watch.txt`.
 - Tests : 10 tests portables réussis sous Linux. Modules Windows et scripts non exécutés ici. Pas de garantie de détection universelle, de récupération automatique, ni de performances Dual Core mesurées. Sauvegardes hors ligne et OS maintenu indispensables. Windows 10 22H2 nécessite une couverture de mises à jour prolongée ou une migration vers un OS pris en charge.
+
+## V9.0 - Incident retention
+The in-memory incident latch holds learning for 30 healthy cycles after evidence, and does not expire while telemetry is degraded. It is not persistent across restarts. IncidentTest checks 1,048,576 transitions and expiry behavior. backup.cmd opens Windows File History for manual backup configuration. No automatic file deletion, firewall isolation or restoration is added. Windows integration remains untested here. The existing opt-in Defender scan policy is unchanged. No guarantee of protection against all attacks.
