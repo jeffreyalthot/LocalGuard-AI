@@ -4,7 +4,7 @@
 #include <fstream>
 #include <iomanip>
 #include <unordered_map>
-std::vector<std::string> Detector::inspect(const Snapshot& s,unsigned starts){
+std::vector<std::string> Detector::inspect(const Snapshot& s,unsigned starts,bool learn){
  std::vector<std::string> alerts; risk_=0; if(!s.valid)return alerts;
  std::array<double,4> x{double(s.processes),double(s.connections.size()),double(s.udp),double(starts)};
  const std::array<double,4> floor{20,30,20,10};
@@ -19,7 +19,7 @@ std::vector<std::string> Detector::inspect(const Snapshot& s,unsigned starts){
  for(const auto& e:per)if(e.second>=100){alerts.push_back("High TCP count PID "+std::to_string(e.first)+": "+std::to_string(e.second));score=std::max(score,50);break;}
  if(starts>=30){alerts.emplace_back("High process creation rate");score=std::max(score,50);}
  risk_=std::min(100,score);
- if(alerts.empty()){
+ if(learn && alerts.empty()){
  double a=count<20?1.0/(count+1):0.01;
  for(size_t i=0;i<x.size();++i){double delta=x[i]-mean[i];mean[i]+=a*delta;variance[i]=(1-a)*(variance[i]+a*delta*delta);}
  if(count<20)++count;
