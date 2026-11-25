@@ -42,3 +42,5 @@ add_test(NAME DataDefenseTest COMMAND DataDefenseTest)
 
 add_executable(ProtectionTest ProtectionTest.cpp)
 add_test(NAME ProtectionTest COMMAND ProtectionTest)
+add_executable(ResilienceTest ResilienceTest.cpp)
+add_test(NAME ResilienceTest COMMAND ResilienceTest)

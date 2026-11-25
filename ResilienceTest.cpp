@@ -1,0 +1,3 @@
+#include "Resilience.h"
+#include <iostream>
+int main(){unsigned cases=0;for(unsigned mask=0;mask<64;++mask)for(unsigned ms:{0u,500u,501u,10000u}){Resilience r;ResilienceInput x{bool(mask&1),bool(mask&2),bool(mask&4),bool(mask&8),bool(mask&16),bool(mask&32),ms};for(int i=0;i<20;++i){auto p=r.update(x);bool bad=(mask&31)!=31;if(p.degraded!=bad||p.urgent!=x.suspicious||p.freeze!=(bad||x.suspicious||i<11)||p.interval!=(ms>500?5u:x.suspicious?2u:5u))return 1;++cases;}auto p=r.update({true,true,true,true,true,true,0});if(!p.freeze||!p.urgent)return 2;for(int i=0;i<12;++i){p=r.update({true,true,true,true,true,false,0});if(p.freeze!=(i<11))return 3;}}std::cout<<"Resilience checks="<<cases<<"\n";}
