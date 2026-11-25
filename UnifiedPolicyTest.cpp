@@ -1,0 +1,5 @@
+#include "UnifiedPolicy.h"
+#include <cstdlib>
+#include <iostream>
+static void check(bool x){if(!x)std::abort();}
+int main(){unsigned cases=0;for(unsigned m=0;m<65536;++m){UnifiedPolicy p;auto b=[&](unsigned i){return bool(m&(1u<<i));};UnifiedInput x{{b(0),b(1),b(2),b(3),b(4),b(5),b(6),b(7),false,0},b(8),b(9),b(10),b(11),b(12),b(13),b(14),b(15)};for(int i=0;i<12;++i){auto d=p.update(x);bool h=(m&255)==255&&b(13)&&b(14);bool l=h&&!(m&0x1f00)&&i==11;check(d.healthy==h);check(d.learn==l&&d.persistProfile==l);check(d.scan==(h&&b(9)&&b(15)));check(d.interval==(h&&(b(8)||b(9))?2:5));}++cases;}UnifiedPolicy p;UnifiedInput x{{true,true,true,true,true,true,true,true,false,0},false,false,false,false,false,true,true,true};for(int i=0;i<12;++i)p.update(x);check(p.update(x).learn);x.evidence=true;check(!p.update(x).learn);x.urgent=true;x.sensors.elapsedMs=501;check(!p.update(x).scan);x.sensors.elapsedMs=0;check(!p.update(x).scan);check(!p.update(x).scan);check(p.update(x).scan);std::cout<<cases<<" integrated policy combinations passed\n";}
