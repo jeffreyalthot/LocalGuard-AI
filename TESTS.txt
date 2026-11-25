@@ -1,34 +1,37 @@
-Internal ctest changing into directory: /tmp/lg120
-Test project /tmp/lg120
+Internal ctest changing into directory: /tmp/lg121build
+Test project /tmp/lg121build
       Start  1: DetectorTest
- 1/14 Test  #1: DetectorTest .....................   Passed    0.00 sec
+ 1/15 Test  #1: DetectorTest .....................   Passed    0.00 sec
       Start  2: BehaviorTest
- 2/14 Test  #2: BehaviorTest .....................   Passed    0.00 sec
+ 2/15 Test  #2: BehaviorTest .....................   Passed    0.00 sec
       Start  3: FusionTest
- 3/14 Test  #3: FusionTest .......................   Passed    0.00 sec
+ 3/15 Test  #3: FusionTest .......................   Passed    0.00 sec
       Start  4: SimulationTest
- 4/14 Test  #4: SimulationTest ...................   Passed    0.01 sec
+ 4/15 Test  #4: SimulationTest ...................   Passed    0.01 sec
       Start  5: CampaignSmoke
- 5/14 Test  #5: CampaignSmoke ....................   Passed    0.00 sec
+ 5/15 Test  #5: CampaignSmoke ....................   Passed    0.01 sec
       Start  6: AdaptiveTest
- 6/14 Test  #6: AdaptiveTest .....................   Passed    0.00 sec
+ 6/15 Test  #6: AdaptiveTest .....................   Passed    0.00 sec
       Start  7: DataDefenseTest
- 7/14 Test  #7: DataDefenseTest ..................   Passed    0.01 sec
+ 7/15 Test  #7: DataDefenseTest ..................   Passed    0.01 sec
       Start  8: ProtectionTest
- 8/14 Test  #8: ProtectionTest ...................   Passed    0.00 sec
+ 8/15 Test  #8: ProtectionTest ...................   Passed    0.00 sec
       Start  9: ResilienceTest
- 9/14 Test  #9: ResilienceTest ...................   Passed    0.00 sec
+ 9/15 Test  #9: ResilienceTest ...................   Passed    0.00 sec
       Start 10: RecoveryTest
-10/14 Test #10: RecoveryTest .....................   Passed    0.00 sec
+10/15 Test #10: RecoveryTest .....................   Passed    0.00 sec
       Start 11: IncidentTest
-11/14 Test #11: IncidentTest .....................   Passed    0.01 sec
+11/15 Test #11: IncidentTest .....................   Passed    0.01 sec
       Start 12: IncidentStoreTest
-12/14 Test #12: IncidentStoreTest ................   Passed    0.01 sec
+12/15 Test #12: IncidentStoreTest ................   Passed    0.01 sec
       Start 13: LearningGateTest
-13/14 Test #13: LearningGateTest .................   Passed    0.00 sec
+13/15 Test #13: LearningGateTest .................   Passed    0.01 sec
       Start 14: DataGateTest
-14/14 Test #14: DataGateTest .....................   Passed    0.00 sec
+14/15 Test #14: DataGateTest .....................   Passed    0.00 sec
+      Start 15: StateGuardTest
+15/15 Test #15: StateGuardTest ...................   Passed    0.00 sec
 
-100% tests passed, 0 tests failed out of 14
+100% tests passed, 0 tests failed out of 15
 
-Total Test time (real) =   0.05 sec
+Total Test time (real) =   0.08 sec
+64 state transitions checked
