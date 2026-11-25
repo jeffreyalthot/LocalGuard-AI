@@ -1,19 +1,21 @@
-Internal ctest changing into directory: /tmp/lg4build
-Test project /tmp/lg4build
+Internal ctest changing into directory: /tmp/lg5build
+Test project /tmp/lg5build
     Start 1: DetectorTest
-1/6 Test #1: DetectorTest .....................   Passed    0.00 sec
+1/7 Test #1: DetectorTest .....................   Passed    0.00 sec
     Start 2: BehaviorTest
-2/6 Test #2: BehaviorTest .....................   Passed    0.00 sec
+2/7 Test #2: BehaviorTest .....................   Passed    0.00 sec
     Start 3: FusionTest
-3/6 Test #3: FusionTest .......................   Passed    0.00 sec
+3/7 Test #3: FusionTest .......................   Passed    0.00 sec
     Start 4: SimulationTest
-4/6 Test #4: SimulationTest ...................   Passed    0.01 sec
+4/7 Test #4: SimulationTest ...................   Passed    0.01 sec
     Start 5: CampaignSmoke
-5/6 Test #5: CampaignSmoke ....................   Passed    0.00 sec
+5/7 Test #5: CampaignSmoke ....................   Passed    0.00 sec
     Start 6: AdaptiveTest
-6/6 Test #6: AdaptiveTest .....................   Passed    0.00 sec
+6/7 Test #6: AdaptiveTest .....................   Passed    0.00 sec
+    Start 7: DataDefenseTest
+7/7 Test #7: DataDefenseTest ..................   Passed    0.01 sec
 
-100% tests passed, 0 tests failed out of 6
+100% tests passed, 0 tests failed out of 7
 
-Total Test time (real) =   0.03 sec
-6464 combinations; invariants passed; cooldown passed
+Total Test time (real) =   0.04 sec
+Sequences=10000 failures=0
