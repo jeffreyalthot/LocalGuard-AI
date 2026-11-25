@@ -1,6 +1,6 @@
 #include "NetworkIntel.h"
 #include <iostream>
-int main(){NetworkIntel n;Snapshot s;s.valid=true;s.identities={{1,"one"},{2,"two"}};if(!n.update(s).healthy)return 1;
+int main(){NetworkIntel n;Snapshot s;s.valid=true;s.identities={{1,"one",100},{2,"two",200}};if(!n.update(s).healthy)return 1;
  for(unsigned i=0;i<12;++i)s.connections.push_back({1,std::to_string(i)});
  auto r=n.update(s);if(!r.healthy||r.findings.size()!=1||r.findings[0].pid!=1||r.findings[0].novel!=12)return 2;
  if(!n.update(s).findings.empty())return 3;
@@ -10,5 +10,6 @@ int main(){NetworkIntel n;Snapshot s;s.valid=true;s.identities={{1,"one"},{2,"tw
  s.valid=false;if(n.update(s).healthy)return 7;
  s.valid=true;s.connections.resize(12);s.identities[0].name="changed";if(!n.update(s).findings.empty())return 8;
  s.connections.resize(16385);if(n.update(s).healthy)return 9;
- std::cout<<"9 network attribution checks passed\n";
+ s.connections.clear(); s.identities[0].created=300; n.update(s); for(unsigned i=0;i<12;++i)s.connections.push_back({1,std::to_string(i)}); s.identities[0].created=400; if(!n.update(s).findings.empty())return 10; s.connections.clear(); s.identities[0].created=0; n.update(s); for(unsigned i=0;i<12;++i)s.connections.push_back({1,std::to_string(i)}); if(!n.update(s).findings.empty())return 11;
+ std::cout<<"11 network attribution checks passed\n";
 }
