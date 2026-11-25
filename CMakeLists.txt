@@ -66,3 +66,5 @@ add_test(NAME StateGuardTest COMMAND StateGuardTest)
 
 add_executable(NetworkIntelTest NetworkIntelTest.cpp NetworkIntel.cpp)
 add_test(NAME NetworkIntelTest COMMAND NetworkIntelTest)
+add_executable(ContainmentTest ContainmentTest.cpp)
+add_test(NAME ContainmentTest COMMAND ContainmentTest)
