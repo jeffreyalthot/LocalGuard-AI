@@ -1,0 +1,3 @@
+#include "RansomGuard.h"
+#include <iostream>
+int main(){unsigned checks=0;for(unsigned w=0;w<=320;w+=10)for(unsigned r=0;r<=80;r+=5)for(unsigned d=0;d<=120;d+=10){RansomGuard g;auto x=g.update({w,r,d,true});if(x.alert!=(w>=300||r>=60||d>=100||(w>=80&&r+d>=20))||!x.healthy)return 1;++checks;}RansomGuard g;for(int i=0;i<5;++i)if(g.update({50,0,0,true}).alert)return 2;if(!g.update({50,0,0,true}).alert)return 3;if(g.update({0,0,0,false}).healthy)return 4;for(int i=0;i<5;++i)if(g.update({}).healthy)return 5;if(!g.update({}).healthy||g.update({}).alert)return 6;std::cout<<checks<<" threshold combinations and rolling-window checks passed\n";}
