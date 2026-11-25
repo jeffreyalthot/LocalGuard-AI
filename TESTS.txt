@@ -1,55 +1,64 @@
-Internal ctest changing into directory: /tmp/lg131
-Test project /tmp/lg131
+Internal ctest changing into directory: /tmp/lg137
+Test project /tmp/lg137
       Start  1: DetectorTest
- 1/24 Test  #1: DetectorTest .....................   Passed    0.00 sec
+ 1/29 Test  #1: DetectorTest .....................   Passed    0.00 sec
       Start  2: BehaviorTest
- 2/24 Test  #2: BehaviorTest .....................   Passed    0.00 sec
+ 2/29 Test  #2: BehaviorTest .....................   Passed    0.00 sec
       Start  3: FusionTest
- 3/24 Test  #3: FusionTest .......................   Passed    0.00 sec
+ 3/29 Test  #3: FusionTest .......................   Passed    0.00 sec
       Start  4: SimulationTest
- 4/24 Test  #4: SimulationTest ...................   Passed    0.01 sec
+ 4/29 Test  #4: SimulationTest ...................   Passed    0.01 sec
       Start  5: CampaignSmoke
- 5/24 Test  #5: CampaignSmoke ....................   Passed    0.00 sec
+ 5/29 Test  #5: CampaignSmoke ....................   Passed    0.00 sec
       Start  6: AdaptiveTest
- 6/24 Test  #6: AdaptiveTest .....................   Passed    0.00 sec
+ 6/29 Test  #6: AdaptiveTest .....................   Passed    0.00 sec
       Start  7: DataDefenseTest
- 7/24 Test  #7: DataDefenseTest ..................   Passed    0.01 sec
+ 7/29 Test  #7: DataDefenseTest ..................   Passed    0.01 sec
       Start  8: ProtectionTest
- 8/24 Test  #8: ProtectionTest ...................   Passed    0.00 sec
+ 8/29 Test  #8: ProtectionTest ...................   Passed    0.00 sec
       Start  9: ResilienceTest
- 9/24 Test  #9: ResilienceTest ...................   Passed    0.00 sec
+ 9/29 Test  #9: ResilienceTest ...................   Passed    0.00 sec
       Start 10: RecoveryTest
-10/24 Test #10: RecoveryTest .....................   Passed    0.00 sec
+10/29 Test #10: RecoveryTest .....................   Passed    0.00 sec
       Start 11: IncidentTest
-11/24 Test #11: IncidentTest .....................   Passed    0.01 sec
+11/29 Test #11: IncidentTest .....................   Passed    0.01 sec
       Start 12: IncidentStoreTest
-12/24 Test #12: IncidentStoreTest ................   Passed    0.01 sec
+12/29 Test #12: IncidentStoreTest ................   Passed    0.01 sec
       Start 13: LearningGateTest
-13/24 Test #13: LearningGateTest .................   Passed    0.00 sec
+13/29 Test #13: LearningGateTest .................   Passed    0.00 sec
       Start 14: DataGateTest
-14/24 Test #14: DataGateTest .....................   Passed    0.00 sec
+14/29 Test #14: DataGateTest .....................   Passed    0.00 sec
       Start 15: StateGuardTest
-15/24 Test #15: StateGuardTest ...................   Passed    0.00 sec
+15/29 Test #15: StateGuardTest ...................   Passed    0.00 sec
       Start 16: NetworkIntelTest
-16/24 Test #16: NetworkIntelTest .................   Passed    0.00 sec
+16/29 Test #16: NetworkIntelTest .................   Passed    0.00 sec
       Start 17: ContainmentTest
-17/24 Test #17: ContainmentTest ..................   Passed    0.00 sec
+17/29 Test #17: ContainmentTest ..................   Passed    0.00 sec
       Start 18: RansomGuardTest
-18/24 Test #18: RansomGuardTest ..................   Passed    0.00 sec
+18/29 Test #18: RansomGuardTest ..................   Passed    0.00 sec
       Start 19: IdentityGuardTest
-19/24 Test #19: IdentityGuardTest ................   Passed    0.00 sec
+19/29 Test #19: IdentityGuardTest ................   Passed    0.00 sec
       Start 20: SelfGuardTest
-20/24 Test #20: SelfGuardTest ....................   Passed    0.00 sec
+20/29 Test #20: SelfGuardTest ....................   Passed    0.00 sec
       Start 21: RecoveryCopyTest
-21/24 Test #21: RecoveryCopyTest .................   Passed    0.01 sec
+21/29 Test #21: RecoveryCopyTest .................   Passed    0.00 sec
       Start 22: CyclePolicyTest
-22/24 Test #22: CyclePolicyTest ..................   Passed    0.00 sec
+22/29 Test #22: CyclePolicyTest ..................   Passed    0.00 sec
       Start 23: UnifiedPolicyTest
-23/24 Test #23: UnifiedPolicyTest ................   Passed    0.00 sec
+23/29 Test #23: UnifiedPolicyTest ................   Passed    0.00 sec
       Start 24: ThreatMemoryTest
-24/24 Test #24: ThreatMemoryTest .................   Passed    0.05 sec
+24/29 Test #24: ThreatMemoryTest .................   Passed    0.04 sec
+      Start 25: ChurnTest
+25/29 Test #25: ChurnTest ........................   Passed    0.01 sec
+      Start 26: MultiFolderRiskTest
+26/29 Test #26: MultiFolderRiskTest ..............   Passed    0.01 sec
+      Start 27: SessionRiskTest
+27/29 Test #27: SessionRiskTest ..................   Passed    0.00 sec
+      Start 28: ComponentGuardTest
+28/29 Test #28: ComponentGuardTest ...............   Passed    0.01 sec
+      Start 29: ServiceRecoveryTest
+29/29 Test #29: ServiceRecoveryTest ..............   Passed    0.00 sec
 
-100% tests passed, 0 tests failed out of 24
+100% tests passed, 0 tests failed out of 29
 
 Total Test time (real) =   0.14 sec
-4096 mask pairs and 1000000 bounded-history cycles passed
