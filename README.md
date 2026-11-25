@@ -61,3 +61,14 @@ Mode observation uniquement. Les recommandations ne modifient pas le pare-feu. A
 
 Module ajouté : Coordinator.
 Mode observation uniquement. Les recommandations ne modifient pas le pare-feu. Aucun service ni transfert réseau ajouté. watch.txt est un fichier de test facultatif; empreinte non cryptographique en mémoire. Le rapport local ne contient que le score. Les modules restent dans un seul processus. Compilation Windows non vérifiée.
+
+
+## Correctif Windows / Ninja
+Tous les modules sont inclus dans CMake. Dates ZIP locales : 2026-11-24 22:22.
+Depuis CMD :
+```cmd
+cmake -S . -B build -G Ninja -DCMAKE_BUILD_TYPE=Release
+cmake --build build --parallel 2
+ctest --test-dir build --output-on-failure
+build\LocalGuard.exe
+```
