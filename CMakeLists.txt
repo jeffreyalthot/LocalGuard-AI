@@ -53,3 +53,11 @@ add_test(NAME IncidentStoreTest COMMAND IncidentStoreTest)
 
 add_executable(LearningGateTest LearningGateTest.cpp)
 add_test(NAME LearningGateTest COMMAND LearningGateTest)
+
+if(WIN32)
+ foreach(t LocalGuard DetectorTest SimulationTest IncidentStoreTest)
+ target_link_libraries(${t} PRIVATE crypt32)
+ endforeach()
+endif()
+add_executable(DataGateTest DataGateTest.cpp DataDefense.cpp)
+add_test(NAME DataGateTest COMMAND DataGateTest)
