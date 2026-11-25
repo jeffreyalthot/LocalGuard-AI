@@ -10,7 +10,7 @@ Snapshot sample(){
  if(h==INVALID_HANDLE_VALUE)return s;
  PROCESSENTRY32W p{}; p.dwSize=sizeof(p);
  if(!Process32FirstW(h,&p)){CloseHandle(h);return s;}
- do{++s.processes; char name[1024]{}; WideCharToMultiByte(CP_UTF8,0,p.szExeFile,-1,name,sizeof(name),nullptr,nullptr); s.identities.push_back({p.th32ProcessID,name});}while(Process32NextW(h,&p)); CloseHandle(h);
+ do{++s.processes; char name[1024]{}; WideCharToMultiByte(CP_UTF8,0,p.szExeFile,-1,name,sizeof(name),nullptr,nullptr); s.identities.push_back({p.th32ProcessID,name});}while(Process32NextW(h,&p)); auto processError=GetLastError(); CloseHandle(h); if(processError!=ERROR_NO_MORE_FILES)return s;
  for(auto family:{AF_INET,AF_INET6}){
  DWORD n=0; GetExtendedTcpTable(nullptr,&n,FALSE,family,TCP_TABLE_OWNER_PID_ALL,0);
  if(!n || n>64*1024*1024)return s;
