@@ -1,13 +1,16 @@
-# LocalGuard 0.1
-Windows 10/11, C++17, Visual Studio 2022 avec développement Desktop C++ et CMake.
+# LocalGuard 0.2 — prototype Windows 10/11 x64
+C++17, local, observation uniquement. Aucun envoi réseau, aucune neutralisation.
 
-Dans PowerShell, depuis le dossier extrait :
+Visual Studio Community avec C++ Desktop et CMake :
+```
+cmake -S . -B build
+cmake --build build --config Release
+.\build\Release\LocalGuard.exe
+```
+Ctrl+C pour arrêter. Lancer dans un dossier accessible en écriture. ETW peut nécessiter une console élevée; en cas d'échec, le programme conserve les relevés toutes les 5 secondes. Ne pas désactiver l'antivirus.
 
-    cmake -S . -B build
-    cmake --build build --config Release
-    .\build\Release\LocalGuard.exe
+ETW Kernel-Process compte les créations de processus; le moteur examine le compteur toutes les 5 secondes (seuil expérimental 30). Les tables TCP établies IPv4/IPv6 et UDP IPv4/IPv6 sont relevées périodiquement. UDP compte les points de terminaison locaux, pas les flux distants. Les alertes TCP par PID incluent le nom de l'exécutable si disponible; une réutilisation de PID peut entraîner une attribution erronée. Le journal est local et rotatif. Profil statistique en mémoire, non persistant.
 
-Arrêt : Ctrl+C. Laisser la console ouverte. Exécuter sans droits administrateur initialement.
-Échantillonnage toutes les 5 secondes environ. Profil en mémoire : 20 échantillons acceptés, puis moyenne exponentielle. Les anomalies ne mettent pas à jour le profil (sauf premier échantillon). Démarrer sur une machine saine. Journal local guard.log, rotation à environ 1 Mio, une archive. Aucun blocage, aucun envoi réseau.
+Test portable du détecteur : `g++ -std=c++17 Detector.cpp DetectorTest.cpp -o test && ./test` (sans NDEBUG).
 
-Limites : instantanés des connexions TCP établies et nombre de processus uniquement, pas de capture de paquets, UDP, contenu, mémoire, identité des exécutables ni détection garantie. Les connexions brèves peuvent échapper au sondage. Seuils expérimentaux, faux positifs possibles. Profil perdu au redémarrage. Pas de service Windows ni de protection anti-altération. Ce prototype ne remplace pas Defender. Compilation Windows et performances non vérifiées. Ne pas déployer sur infrastructure critique sans validation.
+Limites : compilation Windows et ETW non validés ici; pertes ETW non mesurées; aucun suivi du contenu réseau, intégrité des fichiers, service Windows ou modèle neuronal. Seuils heuristiques non calibrés; charge Dual Core non mesurée. Les alertes ne prouvent pas une attaque. Une surveillance périodique peut manquer des connexions brèves.
