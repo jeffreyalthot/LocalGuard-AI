@@ -1,3 +1,5 @@
+# LocalGuard 0.4 — experimental
+
 # LocalGuard 0.2 — prototype Windows 10/11 x64
 C++17, local, observation uniquement. Aucun envoi réseau, aucune neutralisation.
 
@@ -19,3 +21,7 @@ Limites : compilation Windows et ETW non validés ici; pertes ETW non mesurées;
 Adaptive four-feature mean/variance model, heuristic risk score 0–100 (not a probability), and persistent profile.dat. Samples with alerts are excluded from training; this does not prevent slow poisoning or unsafe initial training. Train on a known-clean machine. Delete profile.dat while stopped to reset. ETW counts are treated as zero when unavailable, which can distort the baseline; reset after changing ETW availability. Protect the working directory with OS permissions. No automatic blocking. Windows build and dual-core resource usage remain unverified. File integrity, neural network and resource instrumentation are deferred.
 
 Run detector tests: `cmake -S . -B build`, `cmake --build build --config Release`, `ctest --test-dir build -C Release --output-on-failure`.
+
+
+Module ajouté : Response.
+Mode observation uniquement. Les recommandations ne modifient pas le pare-feu. Aucun service ni transfert réseau ajouté. watch.txt est un fichier de test facultatif; empreinte non cryptographique en mémoire. Le rapport local ne contient que le score. Les modules restent dans un seul processus. Compilation Windows non vérifiée.
