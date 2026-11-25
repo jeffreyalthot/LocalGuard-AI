@@ -12,7 +12,7 @@ std::vector<std::string> Detector::inspect(const Snapshot& s,unsigned starts){
  int score=0;
  if(count>=20)for(size_t i=0;i<x.size();++i){
  double threshold=std::max({floor[i],4*std::sqrt(variance[i]),mean[i]*0.5});
- if(x[i]-mean[i]>threshold){alerts.emplace_back(names[i]);score+=25;}
+ if(x[i]-mean[i]>=threshold){alerts.emplace_back(names[i]);score+=25;}
  }
  std::unordered_map<unsigned long,unsigned> per;
  for(const auto& c:s.connections)++per[c.pid];
