@@ -68,3 +68,6 @@ add_executable(NetworkIntelTest NetworkIntelTest.cpp NetworkIntel.cpp)
 add_test(NAME NetworkIntelTest COMMAND NetworkIntelTest)
 add_executable(ContainmentTest ContainmentTest.cpp)
 add_test(NAME ContainmentTest COMMAND ContainmentTest)
+
+add_executable(RansomGuardTest RansomGuardTest.cpp)
+add_test(NAME RansomGuardTest COMMAND RansomGuardTest)
