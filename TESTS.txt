@@ -1,25 +1,26 @@
-Internal ctest changing into directory: /tmp/lg7build
-Test project /tmp/lg7build
-    Start 1: DetectorTest
-1/9 Test #1: DetectorTest .....................   Passed    0.00 sec
-    Start 2: BehaviorTest
-2/9 Test #2: BehaviorTest .....................   Passed    0.00 sec
-    Start 3: FusionTest
-3/9 Test #3: FusionTest .......................   Passed    0.00 sec
-    Start 4: SimulationTest
-4/9 Test #4: SimulationTest ...................   Passed    0.01 sec
-    Start 5: CampaignSmoke
-5/9 Test #5: CampaignSmoke ....................   Passed    0.00 sec
-    Start 6: AdaptiveTest
-6/9 Test #6: AdaptiveTest .....................   Passed    0.00 sec
-    Start 7: DataDefenseTest
-7/9 Test #7: DataDefenseTest ..................   Passed    0.01 sec
-    Start 8: ProtectionTest
-8/9 Test #8: ProtectionTest ...................   Passed    0.00 sec
-    Start 9: ResilienceTest
-9/9 Test #9: ResilienceTest ...................   Passed    0.00 sec
+Internal ctest changing into directory: /tmp/lg8build
+Test project /tmp/lg8build
+      Start  1: DetectorTest
+ 1/10 Test  #1: DetectorTest .....................   Passed    0.00 sec
+      Start  2: BehaviorTest
+ 2/10 Test  #2: BehaviorTest .....................   Passed    0.00 sec
+      Start  3: FusionTest
+ 3/10 Test  #3: FusionTest .......................   Passed    0.00 sec
+      Start  4: SimulationTest
+ 4/10 Test  #4: SimulationTest ...................   Passed    0.01 sec
+      Start  5: CampaignSmoke
+ 5/10 Test  #5: CampaignSmoke ....................   Passed    0.00 sec
+      Start  6: AdaptiveTest
+ 6/10 Test  #6: AdaptiveTest .....................   Passed    0.00 sec
+      Start  7: DataDefenseTest
+ 7/10 Test  #7: DataDefenseTest ..................   Passed    0.01 sec
+      Start  8: ProtectionTest
+ 8/10 Test  #8: ProtectionTest ...................   Passed    0.00 sec
+      Start  9: ResilienceTest
+ 9/10 Test  #9: ResilienceTest ...................   Passed    0.00 sec
+      Start 10: RecoveryTest
+10/10 Test #10: RecoveryTest .....................   Passed    0.00 sec
 
-100% tests passed, 0 tests failed out of 9
+100% tests passed, 0 tests failed out of 10
 
 Total Test time (real) =   0.04 sec
-Resilience checks=5120
