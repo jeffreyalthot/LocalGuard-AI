@@ -4,5 +4,5 @@ struct DataSignals { unsigned peers=0, newPeers=0; bool valid=true, persistence=
 struct DataPlan { unsigned score=0; bool review=false, urgent=false, freeze=false, degraded=false; };
 class DataDefense {
  std::array<unsigned,12> history{}; unsigned pos=0, learned=0; double baseline=0;
-public: DataPlan update(DataSignals s, bool learn=true) noexcept;
+public: void learn(DataSignals s) noexcept; DataPlan update(DataSignals s, bool learn=true) noexcept;
 };

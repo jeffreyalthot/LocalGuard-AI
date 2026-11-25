@@ -41,3 +41,9 @@ Continuous future-event subscriptions to Security and Defender logs (32 events/c
 
 ## V1.2.0
 Windows DPAPI user-bound encrypted/integrity-checked profiles and incident state (.sec); old plaintext files are deliberately not imported. Start with a new baseline under the same Windows account. DPAPI does not prevent same-account tampering, deletion or replay. Windows implementation not compiled here. DataDefense learning is now gated by previous-cycle freeze and current security log health; this is not a complete same-cycle gate. Profile write failures latch learning suspension. credential-audit.cmd reads native credential and tamper protection status, does not enable them. Linux tests use plaintext fallback, not DPAPI. No network byte accounting, kernel driver, automatic containment or restoration added. Use observation mode first. Do not elevate from an untrusted writable directory.
+
+## V1.2.1 — State integrity and learning transaction
+- Existing unreadable profile or filesystem error latches a fail-closed learning/write gate until restart. Missing profile remains a first-run condition. Corrupt incident state is no longer overwritten automatically. Preserve suspect files and investigate before manually resetting them.
+- Network baseline learning now occurs only after the current cycle's final learning gate, without advancing the correlation history twice.
+- Portable tests: 15/15, including 64 state-gate transitions. Windows executable and DPAPI not tested here. Deletion/replay of state by the same user, kernel threats, automatic containment, and historical event recovery remain unresolved.
+- Version progression: 1.2.1 through 1.2.9, then 1.3.0.
