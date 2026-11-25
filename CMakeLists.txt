@@ -12,7 +12,13 @@ endif()
 add_test(NAME DetectorTest COMMAND DetectorTest)
 if(WIN32)
  add_executable(LocalGuard main.cpp Response.cpp Monitor.cpp Detector.cpp Events.cpp
- Health.cpp Agents.cpp Exchange.cpp Integrity.cpp Budget.cpp Coordinator.cpp)
+ Health.cpp Agents.cpp Exchange.cpp Integrity.cpp Budget.cpp Coordinator.cpp Runtime.cpp Behavior.cpp Fusion.cpp)
  target_compile_definitions(LocalGuard PRIVATE _WIN32_WINNT=0x0A00 WIN32_LEAN_AND_MEAN NOMINMAX)
- target_link_libraries(LocalGuard PRIVATE iphlpapi ws2_32 advapi32)
+ target_link_libraries(LocalGuard PRIVATE iphlpapi ws2_32 advapi32 bcrypt psapi)
 endif()
+
+add_executable(BehaviorTest BehaviorTest.cpp Behavior.cpp)
+add_test(NAME BehaviorTest COMMAND BehaviorTest)
+
+add_executable(FusionTest FusionTest.cpp Fusion.cpp)
+add_test(NAME FusionTest COMMAND FusionTest)
