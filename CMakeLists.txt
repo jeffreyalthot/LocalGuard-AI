@@ -39,3 +39,6 @@ add_test(NAME AdaptiveTest COMMAND AdaptiveTest)
 
 add_executable(DataDefenseTest DataDefenseTest.cpp DataDefense.cpp)
 add_test(NAME DataDefenseTest COMMAND DataDefenseTest)
+
+add_executable(ProtectionTest ProtectionTest.cpp)
+add_test(NAME ProtectionTest COMMAND ProtectionTest)
