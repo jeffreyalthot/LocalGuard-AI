@@ -1,0 +1,3 @@
+#include "Adaptive.h"
+#include <iostream>
+int main(){unsigned cases=0;for(int r=0;r<=100;++r)for(unsigned m=0;m<64;++m){Adaptive a; Evidence e{r,bool(m&1),bool(m&2),bool(m&4),bool(m&8),bool(m&16),m&32?30u:0u};auto p=a.update(e);++cases;if(p.score<0||p.score>100||p.degraded!=(!e.valid||!e.etw)||((e.file||e.registry)&&(!p.freeze||p.score==0))||(!e.valid&&!p.freeze)||p.interval<2||p.interval>5)return 1;}Adaptive a; Evidence e;e.file=true;if(!a.update(e).freeze)return 2;for(int i=0;i<11;++i)if(!a.update({}).freeze)return 3;if(a.update({}).freeze)return 4;std::cout<<cases<<" combinations; invariants passed; cooldown passed\n";}
