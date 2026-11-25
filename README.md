@@ -47,3 +47,6 @@ Windows DPAPI user-bound encrypted/integrity-checked profiles and incident state
 - Network baseline learning now occurs only after the current cycle's final learning gate, without advancing the correlation history twice.
 - Portable tests: 15/15, including 64 state-gate transitions. Windows executable and DPAPI not tested here. Deletion/replay of state by the same user, kernel threats, automatic containment, and historical event recovery remain unresolved.
 - Version progression: 1.2.1 through 1.2.9, then 1.3.0.
+
+## V1.2.2 — Advanced Network Intelligence
+NetworkIntel.cpp/.h attributes distinct established TCP remote addresses to snapshot PID and executable name. Alerts at 40 distinct peers or 12 new peers since the previous valid snapshot for the same PID/name. Duplicate addresses are deduplicated. Invalid, oversized or unattributable snapshots reset comparison and freeze learning. Findings feed the existing behavior signal; no automatic firewall rule is created. Limits: 16384 connections, 8192 process identities for this module. PID reuse with identical name, snapshot races, short-lived connections, UDP remote traffic and actual byte volumes are not resolved. Thresholds are heuristic and may flag legitimate applications. Windows integration not compiled here. Linux Release: 16/16 CTest tests passed, including nine network checks. CPU/RAM not measured.
