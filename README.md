@@ -1,3 +1,5 @@
+# LocalGuard 0.6 — experimental
+
 # LocalGuard 0.5 — experimental
 
 # LocalGuard 0.4 — experimental
@@ -30,4 +32,8 @@ Mode observation uniquement. Les recommandations ne modifient pas le pare-feu. A
 
 
 Module ajouté : Health.
+Mode observation uniquement. Les recommandations ne modifient pas le pare-feu. Aucun service ni transfert réseau ajouté. watch.txt est un fichier de test facultatif; empreinte non cryptographique en mémoire. Le rapport local ne contient que le score. Les modules restent dans un seul processus. Compilation Windows non vérifiée.
+
+
+Module ajouté : Agents.
 Mode observation uniquement. Les recommandations ne modifient pas le pare-feu. Aucun service ni transfert réseau ajouté. watch.txt est un fichier de test facultatif; empreinte non cryptographique en mémoire. Le rapport local ne contient que le score. Les modules restent dans un seul processus. Compilation Windows non vérifiée.
