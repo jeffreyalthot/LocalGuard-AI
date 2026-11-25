@@ -32,3 +32,6 @@ Create build/data/watch.txt before starting the monitor (a harmless text file). 
 
 ## V9.0 - Incident retention
 The in-memory incident latch holds learning for 30 healthy cycles after evidence, and does not expire while telemetry is degraded. It is not persistent across restarts. IncidentTest checks 1,048,576 transitions and expiry behavior. backup.cmd opens Windows File History for manual backup configuration. No automatic file deletion, firewall isolation or restoration is added. Windows integration remains untested here. The existing opt-in Defender scan policy is unchanged. No guarantee of protection against all attacks.
+
+## V1.0.0 (successor to V9.0)
+IncidentStore persists the remaining healthy-cycle hold in data/incident.dat. Missing or malformed state starts with a 30-cycle hold; write failures freeze learning. This is not authenticated storage and cannot resist an administrator or a malicious user with write access. Atomic rename is not a guarantee of power-loss durability. security-events.cmd provides a manual read-only audit of recent failed logons, account/group changes, cleared logs and Defender events; it is not a live sensor. Event text may contain private account information. Existing active scan and confirmed containment policies are unchanged. No Windows integration or resource benchmark was performed here.
