@@ -1,0 +1,71 @@
+Internal ctest changing into directory: /tmp/lg140
+Test project /tmp/lg140
+      Start  1: DetectorTest
+ 1/32 Test  #1: DetectorTest .....................   Passed    0.00 sec
+      Start  2: BehaviorTest
+ 2/32 Test  #2: BehaviorTest .....................   Passed    0.00 sec
+      Start  3: FusionTest
+ 3/32 Test  #3: FusionTest .......................   Passed    0.00 sec
+      Start  4: SimulationTest
+ 4/32 Test  #4: SimulationTest ...................   Passed    0.01 sec
+      Start  5: CampaignSmoke
+ 5/32 Test  #5: CampaignSmoke ....................   Passed    0.00 sec
+      Start  6: AdaptiveTest
+ 6/32 Test  #6: AdaptiveTest .....................   Passed    0.00 sec
+      Start  7: DataDefenseTest
+ 7/32 Test  #7: DataDefenseTest ..................   Passed    0.01 sec
+      Start  8: ProtectionTest
+ 8/32 Test  #8: ProtectionTest ...................   Passed    0.00 sec
+      Start  9: ResilienceTest
+ 9/32 Test  #9: ResilienceTest ...................   Passed    0.00 sec
+      Start 10: RecoveryTest
+10/32 Test #10: RecoveryTest .....................   Passed    0.00 sec
+      Start 11: IncidentTest
+11/32 Test #11: IncidentTest .....................   Passed    0.01 sec
+      Start 12: IncidentStoreTest
+12/32 Test #12: IncidentStoreTest ................   Passed    0.01 sec
+      Start 13: LearningGateTest
+13/32 Test #13: LearningGateTest .................   Passed    0.00 sec
+      Start 14: DataGateTest
+14/32 Test #14: DataGateTest .....................   Passed    0.00 sec
+      Start 15: StateGuardTest
+15/32 Test #15: StateGuardTest ...................   Passed    0.00 sec
+      Start 16: NetworkIntelTest
+16/32 Test #16: NetworkIntelTest .................   Passed    0.00 sec
+      Start 17: ContainmentTest
+17/32 Test #17: ContainmentTest ..................   Passed    0.00 sec
+      Start 18: RansomGuardTest
+18/32 Test #18: RansomGuardTest ..................   Passed    0.00 sec
+      Start 19: IdentityGuardTest
+19/32 Test #19: IdentityGuardTest ................   Passed    0.00 sec
+      Start 20: SelfGuardTest
+20/32 Test #20: SelfGuardTest ....................   Passed    0.00 sec
+      Start 21: RecoveryCopyTest
+21/32 Test #21: RecoveryCopyTest .................   Passed    0.01 sec
+      Start 22: CyclePolicyTest
+22/32 Test #22: CyclePolicyTest ..................   Passed    0.00 sec
+      Start 23: UnifiedPolicyTest
+23/32 Test #23: UnifiedPolicyTest ................   Passed    0.00 sec
+      Start 24: ThreatMemoryTest
+24/32 Test #24: ThreatMemoryTest .................   Passed    0.05 sec
+      Start 25: ChurnTest
+25/32 Test #25: ChurnTest ........................   Passed    0.01 sec
+      Start 26: MultiFolderRiskTest
+26/32 Test #26: MultiFolderRiskTest ..............   Passed    0.01 sec
+      Start 27: SessionRiskTest
+27/32 Test #27: SessionRiskTest ..................   Passed    0.00 sec
+      Start 28: ComponentGuardTest
+28/32 Test #28: ComponentGuardTest ...............   Passed    0.01 sec
+      Start 29: ServiceRecoveryTest
+29/32 Test #29: ServiceRecoveryTest ..............   Passed    0.00 sec
+      Start 30: VersionedRecoveryTest
+30/32 Test #30: VersionedRecoveryTest ............   Passed    0.01 sec
+      Start 31: ReliabilityTest
+31/32 Test #31: ReliabilityTest ..................   Passed    0.01 sec
+      Start 32: ReleaseGateTest
+32/32 Test #32: ReleaseGateTest ..................   Passed    0.00 sec
+
+100% tests passed, 0 tests failed out of 32
+
+Total Test time (real) =   0.17 sec
+786432 integrated policy cycles passed

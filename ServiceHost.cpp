@@ -1,4 +1,5 @@
 #include "ServiceHost.h"
+#include "ServiceRecovery.h"
 #include <mutex>
 namespace {
 SERVICE_STATUS_HANDLE handle=nullptr;
@@ -26,7 +27,7 @@ void WINAPI entry(DWORD,LPWSTR*){
  handle=RegisterServiceCtrlHandlerExW(L"LocalGuard",control,nullptr);if(!handle)return;
  report(SERVICE_RUNNING);
  int rc=1;try{rc=work(false);}catch(...){rc=1;}
- report(SERVICE_STOPPED,rc?ERROR_GEN_FAILURE:NO_ERROR);
+ report(SERVICE_STOPPED,serviceExitCode(!alive->load(),rc));
 }
 }
 int runService(int (*worker)(bool),std::atomic<bool>& running){
