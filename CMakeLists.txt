@@ -71,3 +71,6 @@ add_test(NAME ContainmentTest COMMAND ContainmentTest)
 
 add_executable(RansomGuardTest RansomGuardTest.cpp)
 add_test(NAME RansomGuardTest COMMAND RansomGuardTest)
+
+add_executable(IdentityGuardTest IdentityGuardTest.cpp)
+add_test(NAME IdentityGuardTest COMMAND IdentityGuardTest)

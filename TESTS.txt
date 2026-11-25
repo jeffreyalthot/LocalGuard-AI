@@ -1,43 +1,45 @@
-Internal ctest changing into directory: /tmp/lg124
-Test project /tmp/lg124
+Internal ctest changing into directory: /tmp/lg125
+Test project /tmp/lg125
       Start  1: DetectorTest
- 1/18 Test  #1: DetectorTest .....................   Passed    0.00 sec
+ 1/19 Test  #1: DetectorTest .....................   Passed    0.01 sec
       Start  2: BehaviorTest
- 2/18 Test  #2: BehaviorTest .....................   Passed    0.00 sec
+ 2/19 Test  #2: BehaviorTest .....................   Passed    0.00 sec
       Start  3: FusionTest
- 3/18 Test  #3: FusionTest .......................   Passed    0.00 sec
+ 3/19 Test  #3: FusionTest .......................   Passed    0.00 sec
       Start  4: SimulationTest
- 4/18 Test  #4: SimulationTest ...................   Passed    0.01 sec
+ 4/19 Test  #4: SimulationTest ...................   Passed    0.01 sec
       Start  5: CampaignSmoke
- 5/18 Test  #5: CampaignSmoke ....................   Passed    0.00 sec
+ 5/19 Test  #5: CampaignSmoke ....................   Passed    0.00 sec
       Start  6: AdaptiveTest
- 6/18 Test  #6: AdaptiveTest .....................   Passed    0.00 sec
+ 6/19 Test  #6: AdaptiveTest .....................   Passed    0.00 sec
       Start  7: DataDefenseTest
- 7/18 Test  #7: DataDefenseTest ..................   Passed    0.01 sec
+ 7/19 Test  #7: DataDefenseTest ..................   Passed    0.01 sec
       Start  8: ProtectionTest
- 8/18 Test  #8: ProtectionTest ...................   Passed    0.00 sec
+ 8/19 Test  #8: ProtectionTest ...................   Passed    0.00 sec
       Start  9: ResilienceTest
- 9/18 Test  #9: ResilienceTest ...................   Passed    0.00 sec
+ 9/19 Test  #9: ResilienceTest ...................   Passed    0.00 sec
       Start 10: RecoveryTest
-10/18 Test #10: RecoveryTest .....................   Passed    0.00 sec
+10/19 Test #10: RecoveryTest .....................   Passed    0.00 sec
       Start 11: IncidentTest
-11/18 Test #11: IncidentTest .....................   Passed    0.01 sec
+11/19 Test #11: IncidentTest .....................   Passed    0.01 sec
       Start 12: IncidentStoreTest
-12/18 Test #12: IncidentStoreTest ................   Passed    0.01 sec
+12/19 Test #12: IncidentStoreTest ................   Passed    0.01 sec
       Start 13: LearningGateTest
-13/18 Test #13: LearningGateTest .................   Passed    0.00 sec
+13/19 Test #13: LearningGateTest .................   Passed    0.00 sec
       Start 14: DataGateTest
-14/18 Test #14: DataGateTest .....................   Passed    0.00 sec
+14/19 Test #14: DataGateTest .....................   Passed    0.00 sec
       Start 15: StateGuardTest
-15/18 Test #15: StateGuardTest ...................   Passed    0.00 sec
+15/19 Test #15: StateGuardTest ...................   Passed    0.00 sec
       Start 16: NetworkIntelTest
-16/18 Test #16: NetworkIntelTest .................   Passed    0.00 sec
+16/19 Test #16: NetworkIntelTest .................   Passed    0.00 sec
       Start 17: ContainmentTest
-17/18 Test #17: ContainmentTest ..................   Passed    0.00 sec
+17/19 Test #17: ContainmentTest ..................   Passed    0.00 sec
       Start 18: RansomGuardTest
-18/18 Test #18: RansomGuardTest ..................   Passed    0.00 sec
+18/19 Test #18: RansomGuardTest ..................   Passed    0.00 sec
+      Start 19: IdentityGuardTest
+19/19 Test #19: IdentityGuardTest ................   Passed    0.00 sec
 
-100% tests passed, 0 tests failed out of 18
+100% tests passed, 0 tests failed out of 19
 
-Total Test time (real) =   0.06 sec
-7293 threshold combinations and rolling-window checks passed
+Total Test time (real) =   0.08 sec
+328 identity combinations and rolling window passed
